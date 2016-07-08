@@ -1,5 +1,5 @@
 LoremIpsum::Application.routes.draw do
-  resources :statuses
+  resources :statuses, except: [:show]
 
   # get "welcome/index"
   # The priority is based upon order of creation: first created -> highest priority.
