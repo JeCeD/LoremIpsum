@@ -15,7 +15,7 @@
         <%= status.contenido %>
       </div>
       <div class="timestamp col s12">
-        <strong><%= "Hace "+time_ago_in_words(status.created_at) %></strong>
+        <strong><%= "Hace "+time_ago_in_words(status.created_at, :only => [:days, :hours, :minutes]) %></strong>
       </div>
     </div>
   <% end %>
