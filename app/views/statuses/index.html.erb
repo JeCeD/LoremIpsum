@@ -1,0 +1,23 @@
+<h1>Estados</h1>
+<div class="statuses row">
+  <% @statuses.each do |status| %>
+    <div class="status z-depth-1 col s7">
+      <div class="information col s12">
+        <div class="name left">
+          <%= link_to status.nombre, status %>
+        </div>
+        <div class="options right">
+          <%= link_to 'Edit', edit_status_path(status) %>
+          <%= link_to 'Destroy', status, method: :delete, data: { confirm: 'Are you sure?' } %>
+        </div>
+      </div>
+      <div class="body col s12">
+        <%= status.contenido %>
+      </div>
+      <div class="timestamp col s12">
+        <strong><%= "Hace "+time_ago_in_words(status.created_at) %></strong>
+      </div>
+    </div>
+  <% end %>
+</div>
+<%= link_to 'New Status', new_status_path %>

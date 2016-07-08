@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Lorem Ipsum</title>
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<header>
+	<nav>
+		<div class="nav-wrapper">
+		<a href="#!" class="brand-logo">Logo</a>
+		<a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+			<ul class="right hide-on-med-and-down">
+				<%= link_to "Inicio", root_path %>
+				<%= link_to "Estatus", statuses_path %>
+			</ul>
+			<ul class="side-nav" id="mobile-demo">
+				<%= link_to "Inicio", root_path %>
+				<%= link_to "Estatus", statuses_path %>
+			</ul>
+		</div>
+	</nav>
+</header>
+<div id="notice"><%= notice %></div>
+<div class="content">
+	<div class="container">
+		<%= yield %>
+	</div>
+</div>
+<script type="text/javascript">
+	$(".button-collapse").sideNav();
+</script>
+</body>
+</html>

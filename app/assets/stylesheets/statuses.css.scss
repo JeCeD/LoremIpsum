@@ -1,0 +1,35 @@
+// Place all the styles related to the Statuses controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.status {
+	padding: 20px !important;
+	margin-bottom:20px;
+	.information {
+		overflow: visible;
+		margin-bottom: 10px;
+		.name {
+			font-size: 110%;
+			font-weight: bold;
+		}
+		.options {
+
+		}
+	}
+}
+.notice, .alert, #notice, #alert {
+	color: #FFF;
+	line-height: 40px;
+	text-align: center;
+	font-size: 20px;
+	font-variant: small-caps;
+	font-weight: bold;
+}
+.alert, #alert {
+	background-color: #A8011F;
+	box-shadow: inset 0px 0px 15px #5B0010;
+}
+.notice, #notice {
+	background-color: #33F556;
+	box-shadow: inset 0px 0px 15px #01A81F;
+}
